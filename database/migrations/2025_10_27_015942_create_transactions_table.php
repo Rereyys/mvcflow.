@@ -17,6 +17,7 @@ class CreateTransactionsTable extends Migration
             $table->id();
             $table->date('date');
             $table->integer('total');
+            $table->integer('pay_total');
             $table->timestamps();
         });
     }
