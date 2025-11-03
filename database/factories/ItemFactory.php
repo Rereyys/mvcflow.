@@ -14,7 +14,10 @@ class ItemFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'category_id' => $this->faker->numberBetween(1, 5),
+            'name' => $this->faker->word(),
+            'price' => $this->faker->randomFloat(1000, 1000000),
+            'stock' => $this->faker->numberBetween(1, 100),
         ];
     }
 }

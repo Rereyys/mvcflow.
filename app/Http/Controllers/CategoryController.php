@@ -9,12 +9,14 @@ class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     *  
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+       $categories = Category::all();
+    //    return $categories;
+       return view( 'category', compact('categories'));
     }
 
     /**
@@ -83,3 +85,5 @@ class CategoryController extends Controller
         //
     }
 }
+
+return view('Category', );
